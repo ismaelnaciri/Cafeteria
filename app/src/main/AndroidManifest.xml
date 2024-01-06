@@ -12,6 +12,7 @@
         android:icon="@drawable/pngtree_coffee_logo_design_png_image_3373121_removebg_preview"
         android:roundIcon="@drawable/pngtree_coffee_logo_design_png_image_3373121_removebg_preview"
         android:supportsRtl="true"
+        android:forceDarkAllowed="false"
         android:theme="@style/Theme.Cafeteria"
         tools:targetApi="31">
         <activity

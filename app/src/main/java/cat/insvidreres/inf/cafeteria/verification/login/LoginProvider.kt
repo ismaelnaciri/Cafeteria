@@ -35,6 +35,10 @@ class LoginProvider {
                 LoginModel(
                     "alex@gmail.com",
                     "alex1234"
+                ),
+                LoginModel(
+                    "admin",
+                    "admin"
                 )
             )
         }
