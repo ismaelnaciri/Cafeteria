@@ -3,9 +3,9 @@ package cat.insvidreres.inf.cafeteria.afterVerification.mealFragment
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
-import cat.insvidreres.inf.cafeteria.afterVerification.payFragment.OrderSharedViewModel
+import cat.insvidreres.inf.cafeteria.afterVerification.OrderSharedViewModel
+import cat.insvidreres.inf.cafeteria.afterVerification.payFragment.Item
 import cat.insvidreres.inf.cafeteria.databinding.ItemMealBinding
 import com.bumptech.glide.Glide
 
@@ -22,7 +22,7 @@ class MealAdapter(val context: Context, val dataset: List<Meal>, private val sha
             binding.textViewMealDescription.text = meal.description
             Glide.with(binding.imageViewMeal.context).load(meal.photo).into(binding.imageViewMeal)
             binding.addMealButton.setOnClickListener{
-                sharedViewModel.customerOrder.add(meal)
+                sharedViewModel.addElementToOrder(Item(meal.name, meal.price, meal.description, meal.photo))
             }
         }
     }

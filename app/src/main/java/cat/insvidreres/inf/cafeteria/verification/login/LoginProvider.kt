@@ -2,7 +2,7 @@ package cat.insvidreres.inf.cafeteria.verification.login
 
 class LoginProvider {
     companion object {
-        fun loadLogins(): List<LoginModel> {
+        fun loadLogins(): MutableList<LoginModel> {
             return mutableListOf<LoginModel>(
                 LoginModel(
                     "isma@gmail.com",
@@ -37,6 +37,16 @@ class LoginProvider {
                     "alex1234"
                 )
             )
+        }
+
+        fun checkIfEntryExists(login: LoginModel): Boolean {
+            val currentEntries = loadLogins()
+            for (entry in currentEntries) {
+                if (entry.email == login.email)
+                    return true
+            }
+
+            return false
         }
     }
 }

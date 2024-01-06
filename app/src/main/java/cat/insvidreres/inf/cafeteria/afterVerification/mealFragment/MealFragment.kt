@@ -8,15 +8,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import cat.insvidreres.inf.cafeteria.R
-import cat.insvidreres.inf.cafeteria.afterVerification.payFragment.OrderSharedViewModel
+import cat.insvidreres.inf.cafeteria.afterVerification.OrderSharedViewModel
 import cat.insvidreres.inf.cafeteria.databinding.FragmentMealBinding
 
 
 class MealFragment : Fragment() {
     private val viewModel: MealViewModel by viewModels()
     private lateinit var binding: FragmentMealBinding
-//    private val sharedViewModel: OrderSharedViewModel = ViewModelProvider(requireActivity()).get(OrderSharedViewModel::class.java)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,7 +26,8 @@ class MealFragment : Fragment() {
         mealRecyclerView.layoutManager = LinearLayoutManager(context)
         mealRecyclerView.setHasFixedSize(true)
 
-        val sharedViewModel: OrderSharedViewModel = ViewModelProvider(requireActivity()).get(OrderSharedViewModel::class.java)
+        val sharedViewModel: OrderSharedViewModel = ViewModelProvider(requireActivity()).get(
+            OrderSharedViewModel::class.java)
 
         viewModel.getMeals()
         viewModel.meals.observe(viewLifecycleOwner) { mealsList ->

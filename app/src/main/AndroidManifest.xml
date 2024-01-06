@@ -9,6 +9,7 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:label="@string/app_name"
+        android:icon="@drawable/pngtree_coffee_logo_design_png_image_3373121_removebg_preview"
         android:roundIcon="@drawable/pngtree_coffee_logo_design_png_image_3373121_removebg_preview"
         android:supportsRtl="true"
         android:theme="@style/Theme.Cafeteria"

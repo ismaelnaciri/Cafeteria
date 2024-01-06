@@ -10,4 +10,5 @@
     <string name="order">Order</string>
     <string name="total">Total: %s €</string>
     <string name="login">Login</string>
+    <string name="registerTitle">Register</string>
 </resources>

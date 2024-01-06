@@ -8,8 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import cat.insvidreres.inf.cafeteria.R
-import cat.insvidreres.inf.cafeteria.afterVerification.payFragment.OrderSharedViewModel
+import cat.insvidreres.inf.cafeteria.afterVerification.OrderSharedViewModel
 import cat.insvidreres.inf.cafeteria.databinding.FragmentDrinkBinding
 
 class DrinkFragment : Fragment() {
@@ -28,7 +27,8 @@ class DrinkFragment : Fragment() {
         drinkRecyclerView.layoutManager = LinearLayoutManager(context)
         drinkRecyclerView.setHasFixedSize(true)
 
-        val sharedViewModel: OrderSharedViewModel = ViewModelProvider(requireActivity()).get(OrderSharedViewModel::class.java)
+        val sharedViewModel: OrderSharedViewModel = ViewModelProvider(requireActivity()).get(
+            OrderSharedViewModel::class.java)
 
         viewModel.getDrinks()
         viewModel.drinks.observe(viewLifecycleOwner) { drinksList ->

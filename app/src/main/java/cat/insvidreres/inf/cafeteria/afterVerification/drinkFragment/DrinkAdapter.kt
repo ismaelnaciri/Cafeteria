@@ -5,7 +5,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
-import cat.insvidreres.inf.cafeteria.afterVerification.payFragment.OrderSharedViewModel
+import cat.insvidreres.inf.cafeteria.afterVerification.OrderSharedViewModel
+import cat.insvidreres.inf.cafeteria.afterVerification.payFragment.Item
 import cat.insvidreres.inf.cafeteria.databinding.ItemDrinkBinding
 import com.bumptech.glide.Glide
 
@@ -22,7 +23,7 @@ class DrinkAdapter(val context: Context, val dataset: List<Drink>, private val s
             binding.textViewDrinkDescription.text = drink.description
             Glide.with(binding.imageViewDrink).load(drink.photo).into(binding.imageViewDrink)
             binding.addDrinkButton.setOnClickListener {
-                sharedViewModel.customerOrder.add(drink)
+                sharedViewModel.addElementToOrder(Item(drink.name, drink.price, drink.description, drink.photo))
             }
         }
     }
