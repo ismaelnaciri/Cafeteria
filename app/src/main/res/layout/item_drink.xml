@@ -27,13 +27,15 @@
                     android:layout_width="130dp"
                     android:layout_height="match_parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginLeft="2dp"/>
 
                 <TextView
                     android:id="@+id/textViewDrinkName"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:layout_marginLeft="6dp"
                     android:text="TextView"
                     android:textColor="@color/black"
                     android:textSize="14sp"
@@ -50,6 +52,7 @@
                     android:layout_height="22dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="5dp"
+                    android:layout_marginRight="2dp"
                     android:text="TextView"
                     android:textAlignment="textEnd"
                     android:textColor="@color/black"
@@ -62,6 +65,7 @@
                     android:id="@+id/textViewDrinkDescription"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
                     android:text="TextView"
                     android:textColor="@color/black"
                     android:textSize="12sp"
